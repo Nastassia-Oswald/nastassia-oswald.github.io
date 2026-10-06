@@ -1,0 +1,441 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Experience · Nastassia Oswald</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+
+<style>
+@font-face{font-family:"HomeVideo";src:url(fonts/HomeVideo-Regular.ttf) format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"HomeVideo";src:url(fonts/HomeVideo-Bold.ttf) format("truetype");font-weight:700;font-display:swap}
+:root{
+  --ground:#FFFFFF; --band:#232323; --band2:#393939; --row:#F7F7F7; --ph:#D9D9D9; --ink:#232323; --muted:#6B6B6B; --line:#E3E3E3; --line-strong:#BDBDBD;
+  --lime:#D1F902; --pink:#FD93FF; --on-lime:#232323; --chipbg:#E3E3E3; --lime-soft:#F1FDB8; --num:#D4D4D4;
+  --display:"HomeVideo","IBM Plex Mono",ui-monospace,monospace;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --wrap:1180px; --gut:clamp(16px,4vw,40px); --rail:40px; --rail-off:44px;
+}
+*{box-sizing:border-box}
+.band h1.ptitle{font-family:var(--display);font-weight:400;font-size:24px;line-height:1.2;text-transform:uppercase;margin-top:0;max-width:none}
+.band .sub2{font-family:var(--mono);font-size:clamp(15px,1.6vw,19px);letter-spacing:.06em;text-transform:uppercase;margin-top:20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.rgs{display:flex;flex-wrap:wrap;gap:6px}
+.rg{position:relative;font-family:var(--mono);font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink);padding:3px 8px;border:1px solid transparent;background:linear-gradient(var(--ground),var(--ground)) padding-box,linear-gradient(90deg,var(--g1),var(--g2)) border-box;--g1:#AFC1DF;--g2:#ADCDFF;cursor:help;white-space:nowrap}
+.rg.hc{--g1:#ACDDC3;--g2:#ACE66F}
+.rg.ai{--g1:#E3AFFF;--g2:#FD88FF}
+.rg::after{content:attr(data-tip);position:absolute;left:0;bottom:calc(100% + 8px);width:max-content;max-width:280px;white-space:normal;text-transform:none;letter-spacing:0;font-size:12px;line-height:1.45;background:#232323;color:#FFFFFF;padding:7px 10px;opacity:0;pointer-events:none;transform:translateY(4px);transition:opacity .15s,transform .15s;z-index:5}
+.rg:hover::after,.rg:focus-visible::after{opacity:1;transform:none}
+.rg:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+img{max-width:100%}
+[hidden]{display:none!important}
+a{color:inherit}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+h1,h2,h3,h4{text-wrap:balance;margin:0}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gut)}
+@media (max-width:1380px){.wrap{padding-right:calc(var(--rail) + var(--rail-off) + 20px)}}
+@media (max-width:640px){:root{--rail:34px;--rail-off:8px}.wrap{padding-right:calc(var(--rail) + var(--rail-off) + 12px)}}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pix{display:block}
+
+/* rail */
+.rail{position:fixed;top:env(safe-area-inset-top,0px);right:var(--rail-off);width:var(--rail);z-index:40;background:#FFFFFF;color:#232323;display:flex;flex-direction:column;align-items:center;box-shadow:0 0 0 1px rgba(0,0,0,.06)}
+.rail .mark{font-family:var(--display);font-size:15px;text-decoration:none;padding:12px 0 10px;letter-spacing:.02em;white-space:nowrap}
+.rail nav{display:flex;flex-direction:column;align-items:center;gap:0;width:100%}
+.rail nav a{writing-mode:vertical-rl;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:14px 0;width:100%;display:flex;align-items:center;justify-content:center;color:#232323}
+.rail nav a:hover{background:#EFEFEF}
+.rail nav a[aria-current="page"]{background:#393939;color:#FFFFFF}
+.rail button{background:none;border:0;color:#232323;cursor:pointer;padding:12px 0;width:100%;display:flex;justify-content:center}
+.rail button:hover{background:#EFEFEF}
+.rail .fold{border-top:1px solid #E3E3E3}
+.rail .fold{border-top:1px solid #E3E3E3}
+.rail.collapsed nav{display:none}
+
+/* bands */
+.band{background:var(--band);color:#FFFFFF;padding-block:clamp(64px,9vw,96px) clamp(56px,8vw,84px);min-height:285px}
+.band .kicker{font-family:var(--mono);font-size:clamp(15px,1.6vw,19px);letter-spacing:.06em;text-transform:uppercase}
+.band .say{font-family:var(--mono);font-size:clamp(17px,2vw,22px);line-height:1.4;margin-top:28px;max-width:34ch}
+.band .back{font-family:var(--mono);font-size:13px;color:#BDBDBD;text-decoration:none}
+.band .back:hover{color:var(--lime)}
+.band h1{font-family:var(--display);font-weight:400;font-size:clamp(30px,4.6vw,56px);line-height:1.02;text-transform:uppercase;margin-top:22px;max-width:22ch}
+.band .sub{font-family:var(--mono);font-size:13px;color:#BDBDBD;margin-top:22px;letter-spacing:.04em}
+
+/* home: how */
+.how{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(28px,6vw,96px);padding-block:40px 20px}
+.how h2{font-family:var(--mono);font-weight:400;font-size:clamp(21px,2.4vw,28px);line-height:1.3;max-width:28ch}
+.acc{border-top:1px solid var(--line-strong)}
+.acc details{border-bottom:1px solid var(--line-strong)}
+.acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 2px;font-weight:600;font-size:15px}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary .ic{color:var(--muted)}
+.acc summary .ic .x{display:none}
+.acc details[open] summary .ic .x{display:block}
+.acc details[open] summary .ic .p{display:none}
+.acc .body{padding:0 2px 22px;display:grid;gap:14px}
+.acc .body p{max-width:56ch;font-size:14.5px;line-height:1.6}
+.acc .quote.grad{background:linear-gradient(90deg,#D388FF,#FD88FF);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;font-weight:600;padding:0}
+.acc .quote{font-family:var(--mono);font-size:15px;background:var(--lime);color:var(--on-lime);padding:10px 12px;justify-self:start}
+@media (max-width:860px){.how{grid-template-columns:1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;border:1px solid var(--line-strong);padding:3px 8px;color:var(--muted);white-space:nowrap}
+.tag{display:inline-flex;align-items:center;font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;padding:4px 8px;background:var(--chipbg);color:var(--muted);white-space:nowrap}
+.tag.reg{background:var(--lime);color:var(--on-lime)}
+.tag.ai{background:var(--pink);color:#232323}
+
+.cta{background:var(--lime);color:var(--on-lime);margin-top:40px}
+.cta .wrap{display:flex;flex-wrap:wrap;gap:12px 40px;padding-block:22px;font-family:var(--mono);font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.cta a{text-decoration:none;font-weight:500;display:inline-flex;gap:10px;align-items:center}
+.cta a:hover{text-decoration:underline}
+
+.practice{padding-block:clamp(56px,7vw,84px) 48px}
+.practice .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:20px 40px;flex-wrap:wrap}
+.practice h2{font-family:var(--display);font-weight:400;font-size:clamp(40px,6.4vw,76px);line-height:1}
+.practice p{font-family:var(--mono);font-size:14px;line-height:1.5;padding-bottom:8px}
+.cases{background:var(--row)}
+.case{display:block;text-decoration:none;border-bottom:1px solid var(--line-strong)}
+.case:hover{background:color-mix(in srgb,var(--row) 70%,var(--lime) 30%)}
+.case .wrap{display:grid;grid-template-columns:92px 1fr;gap:0 24px;padding-block:32px 36px}
+.case .n{font-family:var(--display);font-size:clamp(40px,4.4vw,56px);line-height:.9;color:var(--num)}
+.case h3{font-family:var(--display);font-weight:400;font-size:clamp(24px,2.8vw,34px);line-height:1.05;text-transform:uppercase;max-width:26ch}
+.case p{font-family:var(--mono);font-size:13.5px;line-height:1.6;color:var(--muted);max-width:66ch;margin-top:16px}
+.case .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.case .go{display:none}
+@media (max-width:640px){.case .wrap{grid-template-columns:1fr}.case .n{margin-bottom:8px}}
+
+/* footer */
+footer.foot{background:var(--band2);color:#FFFFFF;padding-block:40px 44px}
+footer.foot .big{font-family:var(--display);font-size:clamp(26px,4vw,44px);line-height:1.05;text-transform:uppercase}
+footer.foot .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;align-items:center}
+footer.foot .links a,footer.foot .links button{font:inherit;font-family:var(--mono);font-size:13px;font-weight:500;background:var(--lime);color:#232323;border:0;padding:4px 10px;text-decoration:none;cursor:pointer}
+footer.foot .mail{font-family:var(--mono);font-size:13px;color:#BDBDBD;user-select:all}
+footer.foot .small{font-family:var(--mono);font-size:11px;color:#8A8A8A;margin-top:28px}
+
+/* case study */
+.cs-head{padding-block:40px 8px}
+.cs-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.cs-meta div{background:var(--ground);padding:14px 16px;display:grid;gap:4px;align-content:start}
+.cs-meta dt{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cs-meta dd{margin:0;font-size:14px;line-height:1.4}
+@media (max-width:760px){.cs-meta{grid-template-columns:1fr 1fr}}
+.cs-hero{margin:36px 0 0;border:1px solid var(--line);background:var(--row)}
+.cs-hero img{display:block;width:100%}
+.lede{font-size:clamp(18px,2vw,21px);line-height:1.55;max-width:60ch;margin-top:32px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:36px}
+.fact{background:var(--ground);padding:18px}
+.fact .n{font-family:var(--display);font-size:40px;line-height:1;display:inline-block;box-shadow:inset 0 -.28em var(--lime);font-variant-numeric:tabular-nums}
+.fact .t{font-family:var(--mono);font-size:12.5px;color:var(--muted);margin-top:12px;line-height:1.45}
+@media (max-width:760px){.facts{grid-template-columns:1fr 1fr}}
+.chapter{display:grid;grid-template-columns:220px 1fr;gap:clamp(20px,4vw,56px);padding-block:clamp(40px,5vw,64px);border-top:1px solid var(--line)}
+.chapter > .label{padding-top:8px}
+.chapter h2{font-size:clamp(23px,2.6vw,32px);line-height:1.15;font-weight:600;max-width:26ch}
+.chapter .txt{display:grid;gap:16px;margin-top:16px;max-width:64ch}
+@media (max-width:820px){.chapter{grid-template-columns:1fr;gap:4px}}
+.wip{display:flex;align-items:center;gap:14px;background:#232323;color:#FFFFFF;padding:14px 18px;margin-top:24px;max-width:760px}
+.wip-tag{font-family:var(--display);font-size:20px;background:var(--lime);color:#232323;padding:4px 10px;line-height:1}
+.wip p{font-size:15px;line-height:1.5}
+.sp .wip-tag{background:#FFFFFF}
+.award{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:center;border:1px solid var(--line-strong);padding:16px;margin-top:24px;max-width:640px}
+.award img{width:120px;height:auto;display:block;cursor:zoom-in}
+.award h3{font-size:18px;font-weight:600;margin-top:4px}
+.award p:not(.label){font-size:15px;margin-top:6px}
+.callout{background:var(--lime);color:var(--on-lime);padding:clamp(20px,3vw,30px);margin-top:24px;max-width:64ch}
+.callout p{font-family:var(--mono);font-size:clamp(18px,2.2vw,23px);font-weight:500;line-height:1.3}
+.callout small{display:block;margin-top:10px;font-size:14px;font-family:var(--mono)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:24px}
+.cards:has(> div:nth-child(4)){grid-template-columns:repeat(2,1fr)}
+@media (max-width:560px){.cards:has(> div:nth-child(4)){grid-template-columns:1fr}}
+.cards > div{background:var(--ground);padding:18px;display:grid;gap:6px;align-content:start}
+.cards h3{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:500}
+.cards p{font-size:14.5px;color:var(--muted);line-height:1.5}
+.fig{margin:24px 0 0;border:1px solid var(--line);background:var(--row)}
+.fig img{display:block;width:100%;height:auto;cursor:zoom-in}
+.fig figcaption{font-family:var(--mono);font-size:12px;color:var(--muted);padding:10px 14px;border-top:1px solid var(--line);background:var(--ground)}
+.figs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.figs .fig{margin:0}
+.figs.arrowed{grid-template-columns:1fr auto 1fr;align-items:center}
+.figs.arrowed .ar{color:var(--ink)}
+@media (max-width:720px){.figs,.figs.arrowed{grid-template-columns:1fr}.figs.arrowed .ar{transform:rotate(90deg);justify-self:center}}
+table.tt{width:100%;border-collapse:collapse;font-size:14.5px}
+.tt-wrap{overflow-x:auto;margin-top:20px}
+table.tt th{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;font-weight:500;padding:10px 12px;border-bottom:1px solid var(--ink)}
+table.tt td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top}
+table.tt td:first-child{font-weight:600;white-space:nowrap}
+.st{font-family:var(--mono);font-size:12px;white-space:nowrap;background:var(--chipbg);padding:2px 6px}
+.st.x{background:var(--ink);color:var(--ground)}
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:24px}
+.twocol > div{background:var(--ground);padding:20px;display:grid;gap:8px;align-content:start}
+.twocol > div.hl{background:var(--lime-soft)}
+.twocol h3{font-size:18px;font-weight:600}
+@media (max-width:640px){.twocol{grid-template-columns:1fr}}
+.arrow{font-family:var(--mono);font-size:14px;text-decoration:none;box-shadow:inset 0 -.45em var(--lime);padding-inline:2px}
+.next{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:40px;border-top:1px solid var(--line)}
+.next a{text-decoration:none;display:grid;gap:4px}
+.next a span:last-child{font-family:var(--display);font-size:24px;text-transform:uppercase}
+.next a:hover span:last-child{box-shadow:inset 0 -.4em var(--lime)}
+
+/* experience */
+.path{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--line);margin-top:8px}
+.stop{padding:16px;border-right:1px solid var(--line);display:grid;gap:4px;align-content:start}
+.stop:last-child{border-right:0}
+.stop .yr{font-family:var(--mono);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.stop .org{font-weight:600}
+.stop .stage{font-family:var(--mono);font-size:12px}
+.stop .tag{justify-self:start;margin-top:8px}
+.stop a.org{text-decoration:none}.stop a.org:hover{text-decoration:underline}
+.scale{display:flex;justify-content:space-between;margin-top:10px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.scale span:nth-child(2){flex:1;margin:0 12px;align-self:center;height:6px;background:linear-gradient(90deg,var(--lime),#232323);-webkit-mask:repeating-linear-gradient(90deg,#000 0 6px,transparent 6px 12px);mask:repeating-linear-gradient(90deg,#000 0 6px,transparent 6px 12px)}
+@media (max-width:820px){.path,.scale{display:none}}
+.xp{border-top:1px solid var(--ink);margin-top:48px}
+.xp details{border-bottom:1px solid var(--line)}
+.xp summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:120px 1fr auto 24px;gap:clamp(12px,3vw,32px);align-items:start;padding-block:20px}
+.xp summary::-webkit-details-marker{display:none}
+.xp summary .yr{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:2px;font-variant-numeric:tabular-nums}
+.xp summary .who strong{display:block;font-weight:600;font-size:17px}
+.xp summary .who span{font-size:14px;color:var(--muted)}
+.xp summary .who p{font-size:15px;margin-top:8px;max-width:60ch}
+.xp summary .tags{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end;max-width:300px}
+.xp summary .ic{color:var(--muted);padding-top:6px}
+.xp summary .ic .x{display:none}
+.xp details[open] summary .ic .x{display:block}
+.xp details[open] summary .ic .p{display:none}
+.xp details.static summary{cursor:default}
+.xp .body{padding:0 0 32px calc(120px + clamp(12px,3vw,32px));display:grid;gap:14px}
+.xp .body h4{font-size:18px;font-weight:600;margin-top:10px}
+.xp .body p{max-width:64ch}
+.xp .body .fig{margin-top:6px;max-width:840px}
+@media (max-width:760px){.xp summary{grid-template-columns:1fr 20px}.xp summary .yr,.xp summary .who,.xp summary .tags{grid-column:1}.xp summary .tags{justify-content:flex-start}.xp summary .ic{grid-column:2;grid-row:1}.xp .body{padding-left:0}}
+
+/* visual page */
+.vwrap{padding-block:clamp(48px,7vw,76px)}
+.v-scroll{container-type:inline-size}
+.vgrid{--g:6px;--cell:calc((100cqw - 6 * var(--g)) / 7);display:grid;grid-template-columns:repeat(7,var(--cell));grid-auto-rows:var(--cell);gap:var(--g)}
+.v{position:relative;overflow:hidden;min-width:0;display:block;padding:0;border:0;font:inherit;color:inherit;background:transparent}
+.v.ph{background:var(--ph)}
+.v.dk{background:#393939}
+.v.img{cursor:zoom-in}
+.v.img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease,filter .45s ease}
+.v.img.fit img{object-fit:contain;padding:9%}
+.v.img:hover img,.v.img:focus-visible img{transform:scale(1.04)}
+.v.film img{filter:grayscale(1) contrast(1.05)}
+.v.film:hover img,.v.film:focus-visible img{filter:none}
+.v .cap{position:absolute;left:0;right:0;bottom:0;font-family:var(--mono);font-size:clamp(8px,.95cqw,11px);line-height:1.3;padding:5px 6px;background:rgba(35,35,35,.86);color:#FFFFFF;transform:translateY(100%);transition:transform .25s ease;text-align:left}
+.v.img:hover .cap,.v.img:focus-visible .cap{transform:none}
+.v.film .cap{display:none}
+.v.txt{display:flex;flex-direction:column;justify-content:flex-end;font-family:var(--sans);font-size:clamp(8px,1.25cqw,14px);line-height:1.35;padding:0 0 6px}
+.v.txt b{font-weight:600;margin-bottom:.9em}
+.big-t{font-family:var(--sans);font-weight:700;line-height:.8;letter-spacing:-.02em;color:var(--ink);z-index:2;pointer-events:none;display:flex;align-items:flex-end}
+.v.more{display:flex;align-items:center;justify-content:center;cursor:pointer;gap:10%}
+.v.more i{width:14%;aspect-ratio:1;background:var(--ink);border-radius:50%}
+.tpal{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr 1fr}
+.apal{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
+.tlab{background:#222222;color:#DEDEDB;padding:8%;display:flex;flex-direction:column;justify-content:space-between}
+.tlab .nm{font-family:Dirtyline,sans-serif;font-size:clamp(12px,2.1cqw,24px);line-height:1}
+.tlab .ds{font-family:var(--sans);font-size:clamp(7px,.95cqw,11px);line-height:1.3;font-weight:600}
+.tlab .yr{font-family:var(--mono);font-size:clamp(7px,.85cqw,10px);opacity:.7}
+.v.omio{display:flex;align-items:flex-end;padding:6px;font-family:var(--mono);font-size:clamp(7px,.85cqw,10px);color:var(--muted);line-height:1.3}
+
+.beyond-s{background:var(--lime);color:var(--on-lime);padding-block:clamp(40px,6vw,64px) 0}
+.beyond-s .top{display:flex;justify-content:space-between;align-items:flex-end;gap:20px 40px;flex-wrap:wrap;margin-bottom:40px}
+.beyond-s h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,4.4vw,52px);line-height:1}
+.beyond-s .top p{font-family:var(--mono);font-size:13px;text-align:right;max-width:34ch}
+.beyond{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#DADADA}
+.beyond div{background:#FFFFFF;color:#232323;padding:32px 20px 44px;display:grid;gap:12px;align-content:start}
+.beyond svg{height:30px;width:auto}
+.beyond h3{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;margin-top:18px}
+.beyond p{font-family:var(--mono);font-size:12.5px;line-height:1.7}
+@media (max-width:820px){.beyond{grid-template-columns:1fr 1fr}.beyond-s .top p{text-align:left}}
+
+.lb{position:fixed;inset:0;z-index:60;background:rgba(18,18,18,.92);display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,48px);padding-top:calc(env(safe-area-inset-top,0px) + 16px)}
+.lb[hidden]{display:none}
+.lb figure{margin:0;max-width:min(1300px,100%);max-height:100%;display:flex;flex-direction:column;background:#232323;color:#FFFFFF}
+.lb img{max-height:calc(100vh - 150px);width:auto;max-width:100%;object-fit:contain;display:block;margin:0 auto}
+.lb figcaption{font-family:var(--mono);font-size:13px;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.lb .ctl{display:flex;gap:6px}
+.lb button{font:inherit;background:var(--lime);border:0;color:#232323;cursor:pointer;padding:8px 10px;display:flex;align-items:center}
+
+.xp .xrow{border-bottom:1px solid var(--line)}
+.xp .rh{display:grid;grid-template-columns:120px 1fr auto 24px;gap:clamp(12px,3vw,32px);align-items:start;padding:20px 8px;margin:0 -8px;width:calc(100% + 16px);text-align:left;background:none;border:0;font:inherit;color:inherit}
+.xp button.rh{cursor:pointer;transition:background .15s}
+.xp button.rh:hover{background:var(--row)}
+.xp button.rh:hover .who strong{text-decoration:underline;text-underline-offset:4px}
+.xp .rh .yr{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:2px;font-variant-numeric:tabular-nums}
+.xp .rh .who{display:block}
+.xp .rh .who strong{display:block;font-weight:600;font-size:17px}
+.xp .rh .org2{display:block;font-size:14px;color:var(--muted)}
+.xp .rh .sm{display:block;font-size:15px;margin-top:8px;max-width:60ch}
+.xp .rh .tags{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end;max-width:300px}
+.xp .rh .ic{color:var(--ink);padding-top:6px}
+.acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.act{font-family:var(--mono);font-size:13px;font-weight:500;line-height:1.4;background:#FFFFFF;color:#232323;border:1px solid #232323;padding:5px 12px;text-decoration:none;cursor:pointer}
+.act:hover{background:#232323;color:#FFFFFF}
+@media (max-width:760px){.xp .rh{grid-template-columns:1fr 20px}.xp .rh .yr,.xp .rh .who,.xp .rh .tags{grid-column:1}.xp .rh .tags{justify-content:flex-start}.xp .rh .ic{grid-column:2;grid-row:1}}
+
+html.sp-lock,html.sp-lock body{overflow:hidden}
+.sp-scrim{position:fixed;inset:0;z-index:50;background:rgba(35,35,35,.45);opacity:0;transition:opacity .2s}
+.sp-scrim.in{opacity:1}
+.sp{position:fixed;top:0;right:0;bottom:0;z-index:51;width:min(820px,100vw);background:#FFFFFF;color:#232323;border-left:1px solid #232323;overflow-y:auto;overscroll-behavior:contain;transform:translateX(100%);transition:transform .22s ease;
+  --lime:#E6E6E6;--lime-soft:#F2F2F2;--pink:#E6E6E6;--on-lime:#232323;--row:#F5F5F5;--ground:#FFFFFF;--ink:#232323}
+.sp.in{transform:none}
+@media (prefers-reduced-motion:reduce){.sp,.sp-scrim{transition:none}}
+.sp-bar{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:16px;background:#232323;color:#FFFFFF;padding:10px 10px 10px clamp(20px,4vw,40px);font-family:var(--mono);font-size:12px;letter-spacing:.04em}
+.sp-x{background:#FFFFFF;color:#232323;border:0;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex:0 0 auto}
+.sp-x:hover{background:#D9D9D9}
+.sp :focus-visible{outline:2px solid #232323;outline-offset:3px}
+.sp-x:focus-visible{outline-color:#FFFFFF}
+.sp-head{padding:clamp(28px,4vw,40px) clamp(20px,4vw,40px) 8px}
+.sp-head h2{font-family:var(--display);font-weight:400;font-size:clamp(24px,3vw,32px);line-height:1.1;text-transform:uppercase;max-width:24ch}
+.sp-sub{font-family:var(--mono);font-size:13px;color:#6B6B6B;margin-top:14px}
+.sp-body{padding-bottom:64px}
+.sp .wrap{max-width:none;padding-inline:clamp(20px,4vw,40px)}
+.sp .cs-head{padding-top:8px}
+.sp .chapter{grid-template-columns:1fr;gap:6px}
+.sp .cs-hero,.sp .fig{max-width:100%}
+.sp .callout{background:#F2F2F2;border-left:3px solid #232323}
+.sp .tag.reg,.sp .tag.ai{background:#E6E6E6;color:#232323}
+.sp ul{padding-left:1.2em;margin:0;display:grid;gap:6px}
+.sp-sep{border-top:1px solid #232323;margin-top:56px;padding-top:32px}
+.sp-sep h2{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.6vw,28px);line-height:1.1;text-transform:uppercase;margin-top:10px;max-width:26ch}
+.sp-cta{display:inline-block;margin-top:18px;font-family:var(--mono);font-size:14px;font-weight:500;background:#232323;color:#FFFFFF;padding:10px 14px;text-decoration:none}
+.sp-cta:hover{background:#000000}
+</style></head><body>
+<aside class="rail" id="rail"><a class="mark" href="index.html" aria-label="Home">N·O</a><nav aria-label="Main"><a href="experience.html" aria-current="page">Experience</a><a href="visual.html">Visual work</a><a href="https://www.linkedin.com/in/nastassiaeo/" target="_blank" rel="noopener">LinkedIn</a></nav><button type="button" class="fold" id="fold" aria-expanded="true"><svg class="pix up" viewBox="0 0 8 4" width="16" height="8" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="3" y="0" width="1" height="1"/><rect x="4" y="0" width="1" height="1"/><rect x="2" y="1" width="1" height="1"/><rect x="3" y="1" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" y="1" width="1" height="1"/><rect x="1" y="2" width="1" height="1"/><rect x="2" y="2" width="1" height="1"/><rect x="5" y="2" width="1" height="1"/><rect x="6" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="7" y="3" width="1" height="1"/></svg><svg class="pix down" viewBox="0 0 8 4" width="16" height="8" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="0" y="0" width="1" height="1"/><rect x="1" y="0" width="1" height="1"/><rect x="6" y="0" width="1" height="1"/><rect x="7" y="0" width="1" height="1"/><rect x="1" y="1" width="1" height="1"/><rect x="2" y="1" width="1" height="1"/><rect x="5" y="1" width="1" height="1"/><rect x="6" y="1" width="1" height="1"/><rect x="2" y="2" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="5" y="2" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/></svg></button></aside>
+<main>
+<div class="band"><div class="wrap"><h1 class="ptitle">Experience</h1><p class="sub2">From start-up to enterprise</p></div></div>
+<div class="wrap cs-head">
+  <p class="lede" style="margin-top:8px">13 years across a travel start-up, a corporate innovation lab, 2 scale-ups and an enterprise data platform. Lime marks work done under regulation. Open a role to read the full case study.</p>
+  <div class="path" style="margin-top:40px">
+    <div class="stop"><span class="yr">2014–18</span><span class="org">Omio (GoEuro)</span><span class="stage">Start-up → scale-up</span></div>
+    <div class="stop"><span class="yr">2019–20</span><span class="org">Körber Digital</span><span class="stage">Corporate innovation lab</span></div>
+    <div class="stop"><span class="yr">2020–21</span><span class="org">Babbel</span><span class="stage">Scale-up</span></div>
+    <div class="stop"><span class="yr">2022–25</span><span class="org">Bryter</span><span class="stage">AI scale-up</span></div>
+    <div class="stop"><span class="yr">2025–26</span><span class="org">Ness · S&amp;P Global</span><span class="stage">Enterprise</span></div>
+    <div class="stop"><span class="yr">2026</span><a class="org" href="https://claude.ai/artifact/9QNn1GrJpyeokjGMVbD3RB" target="_blank" rel="noopener">Consultant ↗</a><span class="stage">Commercial discovery for AI companies</span></div>
+  </div>
+  <div class="scale"><span>Start-up</span><span></span><span>Enterprise</span></div>
+
+  <div class="xp">
+  <div class="xrow"><div class="rh static"><span class="yr">2026</span><span class="who"><strong>Consultant</strong><span class="org2">Independent · Commercial discovery for AI companies</span><span class="sm">I find out why AI pilots stall, and price the fix. I work where the sales case and the product scope have to agree, because that’s where pilots are won or lost.</span><span class="acts"><a class="act" href="https://claude.ai/artifact/9QNn1GrJpyeokjGMVbD3RB" target="_blank" rel="noopener">Website ↗</a><button type="button" class="act" data-open="p-consult-ws" aria-haspopup="dialog">Workshop →</button></span></span><div class="tags"><span class="tag ai">AI</span><span class="tag">Consultancy</span><span class="tag">B2B</span></div><span></span></div></div>
+  <div class="xrow"><button type="button" class="rh" data-open="p-ness" aria-haspopup="dialog"><span class="yr">2025 – 2026</span><span class="who"><strong>Senior Strategic Product Designer</strong><span class="org2">Ness Digital Engineering for S&amp;P Global Mobility</span><span class="sm">Opening S&amp;P Global's internal vehicle pricing platform (MSRP) to carmakers.</span></span><div class="tags"><span class="tag">Enterprise</span><span class="tag">Automotive data</span><span class="tag">B2B</span></div><span class="ic"><svg class="pix" viewBox="0 0 7 7" width="14" height="14" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="3" y="0" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/><rect x="5" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="5" y="4" width="1" height="1"/><rect x="4" y="5" width="1" height="1"/><rect x="3" y="6" width="1" height="1"/></svg></span></button></div>
+  <div class="xrow"><button type="button" class="rh" data-open="p-bryter" aria-haspopup="dialog"><span class="yr">2022 – 2025</span><span class="who"><strong>Principal UX Designer</strong><span class="org2">Bryter · remote</span><span class="sm">Discovery and design through an AI pivot: legal intake, Policy AI, AI Agents, the Contract Agent.</span></span><div class="tags"><span class="tag ai">AI scale-up</span><span class="tag reg">Regulated · Legal &amp; GRC</span></div><span class="ic"><svg class="pix" viewBox="0 0 7 7" width="14" height="14" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="3" y="0" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/><rect x="5" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="5" y="4" width="1" height="1"/><rect x="4" y="5" width="1" height="1"/><rect x="3" y="6" width="1" height="1"/></svg></span></button></div>
+  <div class="xrow"><div class="rh static"><span class="yr">2021</span><span class="who"><strong>Lecturer, UX &amp; UI Diploma</strong><span class="org2">IBAT College Dublin · remote</span><span class="sm">Wrote and taught a 3-month curriculum at 2 weeks' notice, coaching students from discovery to delivery.</span></span><div class="tags"><span class="tag">Teaching</span></div><span></span></div></div>
+  <div class="xrow"><button type="button" class="rh" data-open="p-babbel" aria-haspopup="dialog"><span class="yr">2020 – 2021</span><span class="who"><strong>Product Manager / Senior UX Designer</strong><span class="org2">Babbel · Berlin</span><span class="sm">Reframed team strategy for the move from a language-school marketplace to casual learning.</span></span><div class="tags"><span class="tag">EdTech</span><span class="tag">Scale-up</span><span class="tag">B2C mobile</span></div><span class="ic"><svg class="pix" viewBox="0 0 7 7" width="14" height="14" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="3" y="0" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/><rect x="5" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="5" y="4" width="1" height="1"/><rect x="4" y="5" width="1" height="1"/><rect x="3" y="6" width="1" height="1"/></svg></span></button></div>
+  <div class="xrow"><button type="button" class="rh" data-open="p-korber" aria-haspopup="dialog"><span class="yr">2019 – 2020</span><span class="who"><strong>Product Manager / Senior Strategic Designer</strong><span class="org2">Körber Digital · Berlin</span><span class="sm">New products for healthcare, logistics and manufacturing, including SafeCell, a supply chain for cell and gene therapies.</span></span><div class="tags"><span class="tag">Corporate innovation lab</span><span class="tag reg">Regulated · Pharma</span><span class="tag">IIoT</span></div><span class="ic"><svg class="pix" viewBox="0 0 7 7" width="14" height="14" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="3" y="0" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/><rect x="5" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="5" y="4" width="1" height="1"/><rect x="4" y="5" width="1" height="1"/><rect x="3" y="6" width="1" height="1"/></svg></span></button></div>
+  <div class="xrow"><button type="button" class="rh" data-open="p-omio" aria-haspopup="dialog"><span class="yr">2014 – 2018</span><span class="who"><strong>UX/UI Designer</strong><span class="org2">Omio (GoEuro) · Berlin</span><span class="sm">End-to-end design of mobile and web booking for one of Europe's biggest multi-modal travel platforms.</span></span><div class="tags"><span class="tag">Start-up → scale-up</span><span class="tag">B2C e-commerce</span></div><span class="ic"><svg class="pix" viewBox="0 0 7 7" width="14" height="14" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="3" y="0" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/><rect x="5" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="5" y="4" width="1" height="1"/><rect x="4" y="5" width="1" height="1"/><rect x="3" y="6" width="1" height="1"/></svg></span></button></div>
+  <div class="xrow"><div class="rh static"><span class="yr">2013 – 2014</span><span class="who"><strong>Product Designer</strong><span class="org2">Mediatica · Bologna</span><span class="sm">Rebuilt the structure and interface of 3 B2B e-commerce platforms.</span></span><div class="tags"><span class="tag">Agency</span></div><span></span></div></div>
+  </div>
+
+  <div class="twocol" style="margin-top:56px">
+    <div><p class="label">Workshop</p><h3>Turning Research Silos into Discovery Systems</h3><p>A 3-hour session, online or onsite, for product, design and commercial teams who collect insights separately and want one shared discovery practice.</p><button type="button" class="act" style="justify-self:start" data-open="p-consult-ws" aria-haspopup="dialog">See the workshop →</button></div>
+    <div class="hl"><p class="label">CV</p><h3>The full history</h3><p>Roles, dates and tools are on LinkedIn, and I'm happy to send a PDF CV.</p><a class="arrow" style="justify-self:start" href="https://www.linkedin.com/in/nastassiaeo/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+  </div>
+</div>
+<aside class="sp" id="p-consult-ws" role="dialog" aria-modal="true" aria-labelledby="p-consult-ws-t" hidden><div class="sp-bar"><span>Workshop</span><button type="button" class="sp-x" aria-label="Close"><svg class="pix" viewBox="0 0 7 7" width="14" height="14" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="0" y="0" width="1" height="1"/><rect x="6" y="0" width="1" height="1"/><rect x="1" y="1" width="1" height="1"/><rect x="5" y="1" width="1" height="1"/><rect x="2" y="2" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/><rect x="5" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="6" y="6" width="1" height="1"/></svg></button></div><div class="sp-head"><h2 id="p-consult-ws-t">Turning research silos into discovery systems</h2><p class="sp-sub">3 hours · online or onsite · 4 to 8 people or a cross-functional group</p></div><div class="sp-body"><div class="wrap"><p class="lede">A hands-on workshop for teams who want to line up around their insights and make discovery continuous.</p><figure class="fig"><img src="img/ws_diagram.jpg" alt="From a session: mapping where insights live, then connecting them on the wall" loading="lazy" data-full="img/ws_diagram.jpg" data-cap="From a session: mapping where insights live, then connecting them on the wall"><figcaption>From a session: mapping where insights live, then connecting them on the wall</figcaption></figure><div class="chapter"><p class="label">Why it matters</p><div><h2>Everyone is learning, nobody is connecting it</h2><div class="txt"><p>Most teams collect insights in isolation. Marketing runs customer calls, sales hears the objections, product and design run usability tests. Each team builds useful knowledge, but it rarely connects, so you get noise instead of a shared picture.</p><p>This workshop turns that scattered discovery into one system that every team adds to and learns from.</p></div></div></div><div class="chapter"><p class="label">What you’ll learn</p><div><h2>4 things to take back</h2><div class="cards"><div><h3>Map</h3><p>Where your insights already come from, and how to connect them.</p></div><div><h3>Gaps</h3><p>How to make knowledge gaps visible across teams.</p></div><div><h3>Flow</h3><p>How to get discovery moving both ways between commercial and product.</p></div><div><h3>Tools</h3><p>Practical frameworks and templates for working together.</p></div></div></div></div><div class="chapter"><p class="label">Format</p><div><h2>3 hours, hands-on</h2><div class="txt"><p>Online or onsite, built around interactive exercises, and tailored to how mature your discovery practice is today. Sessions work for small teams of 4 to 8 people or for larger cross-functional groups.</p></div></div></div><div class="chapter"><p class="label">Outcomes</p><div><h2>What you leave with</h2><div class="txt"><ul><li>A shared discovery framework and the workshop templates</li><li>A clear view of where your research silos are</li><li>Concrete next steps to keep discovery continuous</li></ul></div></div></div><div class="chapter"><p class="label">Who it’s for</p><div><h2>Teams that share customers but not insights</h2><div class="txt"><ul><li>Product managers and designers</li><li>Commercial and sales leads</li><li>Research or operations roles that sit between teams</li><li>Anyone dealing with scattered insights or priorities that don’t line up</li></ul><p><a class="sp-cta" href="mailto:nastassia.oswald@gmail.com?subject=Discovery%20workshop">Get in touch about a session →</a></p></div></div></div></div></div></aside><aside class="sp" id="p-ness" role="dialog" aria-modal="true" aria-labelledby="p-ness-t" hidden><div class="sp-bar"><span>2025 – 2026 · Ness Digital Engineering for S&amp;P Global Mobility</span><button type="button" class="sp-x" aria-label="Close"><svg class="pix" viewBox="0 0 7 7" width="14" height="14" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="0" y="0" width="1" height="1"/><rect x="6" y="0" width="1" height="1"/><rect x="1" y="1" width="1" height="1"/><rect x="5" y="1" width="1" height="1"/><rect x="2" y="2" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/><rect x="5" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="6" y="6" width="1" height="1"/></svg></button></div><div class="sp-head"><h2 id="p-ness-t">Turning an analyst’s tool into a product carmakers can use</h2><p class="sp-sub">Enterprise · automotive data · B2B</p></div><div class="sp-body"><div class="wrap"><dl class="cs-meta"><div><dt>Role</dt><dd>Senior Strategic Product Designer</dd></div><div><dt>When</dt><dd>2025 – 2026</dd></div><div><dt>Client</dt><dd>S&amp;P Global Mobility</dd></div><div><dt>Product</dt><dd>MSRP vehicle pricing platform</dd></div></dl><p class="lede">S&amp;P Global’s vehicle pricing platform was built for its own analysts. The goal was to open it up to carmakers.</p><div class="chapter"><p class="label">01 · The problem</p><div><h2>2 teams, 2 environments</h2><div class="txt"><p>Volume forecasts lived in one environment and pricing adjustments in another. My job was to define how the 2 teams and their data could work together without blocking each other.</p></div></div></div><div class="chapter"><p class="label">02 · My part</p><div><h2>Ship it in layers</h2><div class="txt"><p>I split the work into 3 layers so it could ship in parts: analysis, simulation and workflow. Pricing analysts can start baseline scenarios on their own, and new volume data is pulled into existing scenarios on request instead of being forced in.</p></div><figure class="fig"><img src="img/ness_ia.jpg" alt="Mapping user needs, requirements and information architecture. Final screens are under NDA." loading="lazy" data-full="img/ness_ia.jpg" data-cap="Mapping user needs, requirements and information architecture. Final screens are under NDA."><figcaption>Mapping user needs, requirements and information architecture. Final screens are under NDA.</figcaption></figure><figure class="fig"><img src="img/ness_flow.jpg" alt="Partial flow overview, with states" loading="lazy" data-full="img/ness_flow.jpg" data-cap="Partial flow overview, with states"><figcaption>Partial flow overview, with states</figcaption></figure></div></div><div class="chapter"><p class="label">03 · Key decision</p><div><h2>Clear owners before any code</h2><div class="txt"><p>I set up a RACI between Ness and S&amp;P Global so dependencies such as data ingestion had a clear owner, and a Sprint 0 cleared infrastructure blockers before development started.</p></div><figure class="fig"><img src="img/ness_handover.jpg" alt="Handover file: every action broken down, with a description" loading="lazy" data-full="img/ness_handover.jpg" data-cap="Handover file: every action broken down, with a description"><figcaption>Handover file: every action broken down, with a description</figcaption></figure><figure class="fig"><img src="img/ness_uireview.jpg" alt="UI review of the front-end work" loading="lazy" data-full="img/ness_uireview.jpg" data-cap="UI review of the front-end work"><figcaption>UI review of the front-end work</figcaption></figure></div></div><div class="chapter"><p class="label">Outcome</p><div><h2>From concept to a working backend</h2><div class="txt"><p>The project went from concept architecture to a working backend phase within months.</p></div></div></div></div></div></aside><aside class="sp" id="p-bryter" role="dialog" aria-modal="true" aria-labelledby="p-bryter-t" hidden><div class="sp-bar"><span>2022 – 2025 · Bryter · Principal UX Designer</span><button type="button" class="sp-x" aria-label="Close"><svg class="pix" viewBox="0 0 7 7" width="14" height="14" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="0" y="0" width="1" height="1"/><rect x="6" y="0" width="1" height="1"/><rect x="1" y="1" width="1" height="1"/><rect x="5" y="1" width="1" height="1"/><rect x="2" y="2" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/><rect x="5" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="6" y="6" width="1" height="1"/></svg></button></div><div class="sp-head"><h2 id="p-bryter-t">From legal intake to AI agents for compliance teams</h2><p class="sp-sub">Legal tech &amp; compliance AI</p></div><div class="sp-body">
+
+<div class="wrap cs-head">
+  <dl class="cs-meta"><div><dt>Role</dt><dd>Principal UX Designer · discovery &amp; research</dd></div><div><dt>When</dt><dd>Jan 2023 – Aug 2024</dd></div><div><dt>Team</dt><dd>PM, engineering lead, 4 developers, legal advisor</dd></div><div><dt>Domain</dt><dd>Legal, Governance, Risk &amp; Compliance</dd></div></dl>
+  <p class="lede">Bryter's low-code platform was powerful but too heavy for busy lawyers. Over 18 months we tried a ready-made legal intake product, dropped it when buyers showed no urgency, pivoted to AI for compliance teams, launched with paying customers, and then moved back to legal when demand data pointed there.</p>
+  <div class="facts"><div class="fact"><div class="n">35</div><div class="t">discovery calls for legal intake</div></div><div class="fact"><div class="n">30</div><div class="t">trial customers from prototype-led calls</div></div><div class="fact"><div class="n">5</div><div class="t">paying customers at soft launch</div></div><div class="fact"><div class="n">Jul 24</div><div class="t">official launch of AI Agents</div></div></div>
+  <div class="wip"><span class="wip-tag">WIP</span><p><b>Work in progress.</b> I’m still updating this case study, so some parts are shorter than they will be.</p></div>
+  <div class="award"><img src="img/bry_award.jpg" alt="Bryter, finalist for Product of the Year at the European Legal Innovation and Technology Awards 2025" data-full="img/bry_award.jpg" data-cap="Finalist, Product of the Year, European Legal Innovation &amp; Technology Awards 2025"><div><p class="label">Recognition</p><h3>Finalist, Product of the Year</h3><p>Bryter was shortlisted for Product of the Year at the ALM Law.com European Legal Innovation &amp; Technology Awards 2025, held in Milan.</p></div></div>
+  <figure class="cs-hero"><img src="img/bry_hero.jpg" alt="Policy AI screens across three devices"></figure>
+</div>
+<div class="wrap">
+<div class="chapter"><p class="label">01 · Research changed my mind</p><div><h2>An intake product nobody was pulling for</h2><div class="txt"><p>We started with legal intake and matter management. I believed matter management and triage were the value. Our sandbox customers, Allianz, Bosch, Solaris and TD Synnex, ignored both after a few weeks; they only leaned in for the automation. We stripped the product back to intake alone.</p><p>Buyers had budget but no urgency. Meanwhile companies were moving money into AI, often without a use case, and the CEO’s strategy team picked Governance, Risk and Compliance, with company policies as the way in.</p></div><div class="callout"><p>Nobody knew whether that market was real.</p><small>My job: find out quickly, without building much.</small></div></div></div>
+<div class="chapter"><p class="label">02 · My part</p><div><h2>Every call tracked, then mapped</h2><div class="txt"><p>Every prospect session went into one funnel, in the prospect’s own words. Insights became candidate features, each tagged with the prospects it would serve. That gave the strategy team 3 regulated areas to test: OSHA rules for manufacturing, energy and construction; HR; and anti-bribery compliance, which applies to every industry.</p></div></div></div>
+<div class="chapter"><p class="label">03 · My part</p><div><h2>The buyer wasn't the user</h2><div class="txt"><p>Compliance bought the product. Everyone else had to use it.</p></div><div class="cards"><div><h3>Manufacturing workers</h3><p>Often no computer at hand. Warnings are printed as signs.</p></div><div><h3>Clinicians</h3><p>Know their protocols. No time to wait for GRC.</p></div><div><h3>Desk workers</h3><p>Can look the policy up themselves.</p></div><div><h3>Expert users</h3><p>GRC and HR: keep policies current, train, report.</p></div></div><figure class="fig"><img src="img/bry_sense.jpg" alt="Sense-making board: policy users by industry, device, training and knowledge gaps" loading="lazy" data-full="img/bry_sense.jpg" data-cap="Sense-making board: policy users by industry, device, training and knowledge gaps"><figcaption>Sense-making board: policy users by industry, device, training and knowledge gaps</figcaption></figure></div></div>
+<div class="chapter"><p class="label">04 · Screens</p><div><h2>Two looks for the first prototype</h2><div class="txt"><p>The CEO wanted something distinct from the platform, purple instead of blue, before any brand existed. I went colourful and playful first, against the grey platform; the team loved it. Leadership wanted it more serious, so version 2 is calmer. The scope stayed at 4 features: upload, chat with those documents, references, feedback. Plus one fake page, a mocked analytics view, to see what prospects reached for.</p></div><figure class="fig"><img src="img/bry_v1.jpg" alt="Version 1: playful and colourful" loading="lazy" data-full="img/bry_v1.jpg" data-cap="Version 1: playful and colourful"><figcaption>Version 1: playful and colourful</figcaption></figure><figure class="fig"><img src="img/bry_v2.jpg" alt="Version 2: calmer, after CEO and VP Marketing feedback" loading="lazy" data-full="img/bry_v2.jpg" data-cap="Version 2: calmer, after CEO and VP Marketing feedback"><figcaption>Version 2: calmer, after CEO and VP Marketing feedback</figcaption></figure></div></div>
+<div class="chapter"><p class="label">05 · Key decision</p><div><h2>We sat in the calls ourselves</h2><div class="txt"><p>Once the prototype existed, the PM and I joined prospect sessions instead of reading the notes afterwards. Notes tell you what was said; being in the room tells you what mattered. It confirmed something I now always push for: when the people building hear prospects first-hand, ownership goes up and the build moves faster.</p></div></div></div>
+<div class="chapter"><p class="label">06 · Screens</p><div><h2>Every answer shows where it came from</h2><div class="txt"><p>Answers come only from the policies the company uploaded, never the open web. Every answer points to the passage it came from, highlighted, and every answer can be marked wrong. In a regulated space, that is what made people trust it.</p></div><div class="figs"><figure class="fig"><img src="img/bry_answers.jpg" alt="Chat answer next to the source policy, with references" loading="lazy" data-full="img/bry_answers.jpg" data-cap="Chat answer next to the source policy, with references"><figcaption>Chat answer next to the source policy, with references</figcaption></figure><figure class="fig"><img src="img/bry_policy.jpg" alt="Policy detail with summary and contradiction checks" loading="lazy" data-full="img/bry_policy.jpg" data-cap="Policy detail with summary and contradiction checks"><figcaption>Policy detail with summary and contradiction checks</figcaption></figure></div></div></div>
+<div class="chapter"><p class="label">07 · Screens</p><div><h2>The fake page that became the product</h2><div class="txt"><p>The mocked insights on the first dashboard, contradictions, legibility and best practice, got the strongest reactions in calls. So they became the real Policy Agent overview. Cheap test first, then build.</p></div><figure class="fig"><img src="img/bry_mock.jpg" alt="Mocked in the first prototype" loading="lazy" data-full="img/bry_mock.jpg" data-cap="Mocked in the first prototype"><figcaption>Mocked in the first prototype</figcaption></figure></div></div>
+<div class="chapter"><p class="label">08 · Key decision</p><div><h2>Rebuilt around who can see what</h2><div class="txt"><p>We kept the trial customers close, watched how they used the product, and reworked the information architecture around roles: admins, compliance teams, experts and employees. Soft launch came in April 2024, before we had a brand, with 5 paying customers: Bertelsmann, Zimmer Biomet, Essity, TD Synnex and Datasite.</p></div><figure class="fig"><img src="img/bry_ia.jpg" alt="Roles mapped to what they know, need and do, including permissions" loading="lazy" data-full="img/bry_ia.jpg" data-cap="Roles mapped to what they know, need and do, including permissions"><figcaption>Roles mapped to what they know, need and do, including permissions</figcaption></figure></div></div>
+<div class="chapter"><p class="label">09 · Screens</p><div><h2>Designing AI Agents with 1 developer</h2><div class="txt"><p>Policy AI became AI Agents, each one specialised in a single regulation. Commercial wanted agents in their own space, and we had 1 frontend developer. I explored options inside the existing UI and added one menu layer. It looked like a lot on paper; users got it straight away.</p></div><figure class="fig"><img src="img/bry_agent.jpg" alt="Expert Agent: chat history and a panel for answer references" loading="lazy" data-full="img/bry_agent.jpg" data-cap="Expert Agent: chat history and a panel for answer references"><figcaption>Expert Agent: chat history and a panel for answer references</figcaption></figure></div></div>
+<div class="chapter"><p class="label">10 · Screens</p><div><h2>Back to legal: the Contract Agent</h2><div class="txt"><p>When demand pointed back to legal teams, the patterns carried over: projects for each review, chat grounded in the documents you attach, and extracted fields you can check against the source.</p></div><figure class="fig"><img src="img/bry_contract.jpg" alt="Contract Agent: chat grounded in the attached lease agreements" loading="lazy" data-full="img/bry_contract.jpg" data-cap="Contract Agent: chat grounded in the attached lease agreements"><figcaption>Contract Agent: chat grounded in the attached lease agreements</figcaption></figure></div></div>
+<div class="chapter"><p class="label">What I'd do differently</p><div><h2>We had the technology before the market</h2><div class="twocol"><div><h3>Legal: loud</h3><p>Constant media coverage. New AI tools every week.</p></div><div class="hl"><h3>Compliance: quiet</h3><p>Our SEO showed no AI search traffic. Sales handovers showed flat interest.</p></div></div><div class="txt"><p><strong>Look for demand signals before the build, not after it.</strong> We also lost the argument about feature names: users wanted "Chat", commercial wanted something that sounded sophisticated. I collected customer quotes to make the case.</p></div></div></div>
+</div>
+
+</div></aside><aside class="sp" id="p-babbel" role="dialog" aria-modal="true" aria-labelledby="p-babbel-t" hidden><div class="sp-bar"><span>2020 – 2021 · Babbel · Product Manager / Senior UX Designer</span><button type="button" class="sp-x" aria-label="Close"><svg class="pix" viewBox="0 0 7 7" width="14" height="14" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="0" y="0" width="1" height="1"/><rect x="6" y="0" width="1" height="1"/><rect x="1" y="1" width="1" height="1"/><rect x="5" y="1" width="1" height="1"/><rect x="2" y="2" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/><rect x="5" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="6" y="6" width="1" height="1"/></svg></button></div><div class="sp-head"><h2 id="p-babbel-t">Bringing the culture to learners who couldn’t travel</h2><p class="sp-sub">Language learning, B2C mobile</p></div><div class="sp-body">
+
+<div class="wrap cs-head">
+  <dl class="cs-meta"><div><dt>Role</dt><dd>Product Manager · strategic design</dd></div><div><dt>When</dt><dd>Jul – Nov 2020</dd></div><div><dt>Team</dt><dd>User researcher, UI designer, learner experience designer, BRAVI game studio</dd></div><div><dt>Goal</dt><dd>Casual learning experiences and a new metric, Learner Minutes</dd></div></dl>
+  <p class="lede">Babbel Travel sold language trips to schools abroad. In March 2020 travel stopped, and the product with it. I joined as senior UX designer; during discovery the head of product switched my role to product manager so someone could steer the team.</p>
+  <div class="facts"><div class="fact"><div class="n">8</div><div class="t">in-depth interviews in 2 languages</div></div><div class="fact"><div class="n">5</div><div class="t">concepts tested cheaply</div></div><div class="fact"><div class="n">1</div><div class="t">concept killed early</div></div><div class="fact"><div class="n">2024</div><div class="t">Webby honoree for the audio adventure</div></div></div>
+  <figure class="cs-hero"><img src="img/bab_aventura.jpg" alt="Aventura on the Babbel Express in the Babbel app and on podcast platforms"></figure>
+</div>
+<div class="wrap">
+<div class="chapter"><p class="label">01 · The problem</p><div><h2>March 2020: the trips stopped</h2><div class="cards"><div><h3>Before</h3><p>Babbel Travel sold language trips to schools abroad.</p></div><div><h3>March 2020</h3><p>Travel stopped, and the product with it.</p></div><div><h3>The real problem</h3><p>Learners had no way to get close to the language. Alone, lessons felt repetitive and people dropped off.</p></div></div><div class="callout"><p>So: how do we bring the country to them?</p></div></div></div>
+<div class="chapter"><p class="label">02 · My part</p><div><h2>A 3-month plan to find out, cheaply</h2><div class="cards"><div><h3>Question it</h3><p>Mythbusters on our assumptions. Research objectives. Should progress-seekers come first?</p></div><div><h3>Test it</h3><p>Landing page smoke test, pop-up surveys in the product, customer support validating ideas.</p></div><div><h3>Build it with people</h3><p>Learners who had booked a trip, co-creation with language schools, virtual events and workshops.</p></div></div></div></div>
+<div class="chapter"><p class="label">03 · My part</p><div><h2>How the research was run</h2><div class="txt"><p>8 in-depth interviews: 4 users and 4 non-users, 4 beginners and 4 intermediates, in English and Spanish. Two prompts did most of the work: “When you think of culture, what comes to mind?”, answered in words and then pictures, and “A foreign friend wants to learn your culture. Where should they start?”</p></div><div class="figs"><figure class="fig"><img src="img/bab_board1.jpg" alt="A participant&#x27;s board of words and pictures describing a culture" loading="lazy" data-full="img/bab_board1.jpg" data-cap="A participant&#x27;s board of words and pictures describing a culture"><figcaption>A participant's board of words and pictures describing a culture</figcaption></figure><figure class="fig"><img src="img/bab_board2.jpg" alt="What a friend should do first, and which topics to learn" loading="lazy" data-full="img/bab_board2.jpg" data-cap="What a friend should do first, and which topics to learn"><figcaption>What a friend should do first, and which topics to learn</figcaption></figure></div></div></div>
+<div class="chapter"><p class="label">04 · Key decision</p><div><h2>One hypothesis, 5 cheap concepts</h2><div class="txt"><p>Before any concept, we agreed one hypothesis: <strong>closeness to the culture is what makes reviewing worth doing.</strong></p></div><div class="tt-wrap"><table class="tt"><thead><tr><th>Concept</th><th>What testing taught us</th><th>Where it landed</th></tr></thead><tbody><tr><td>Culture Classroom</td><td>Live cooking, language and people at once was overload</td><td><span class="st x">Discarded</span></td></tr><tr><td>Culinary videos</td><td>Depends on content partners like Kitchen Stories</td><td><span class="st">Exploring content</span></td></tr><tr><td>Marketplace of events</td><td>Partner schools already ran online events</td><td><span class="st">Needs a pilot school</span></td></tr><tr><td>Guided video tour</td><td>Learners want to visit and talk to locals</td><td><span class="st">Second test round</span></td></tr><tr><td>Passport To</td><td>Reuses podcasts and articles we already had</td><td><span class="st">Prototyping</span></td></tr></tbody></table></div></div></div>
+<div class="chapter"><p class="label">05 · Key decision</p><div><h2>We killed Culture Classroom</h2><div class="txt"><p>Cooking, language and live interaction at once was cognitive overload, and live cooking classes were far from our strengths and hard to scale. But learners really did want language and cooking together, so what survived became 2 cheaper ideas: culinary videos and the events marketplace.</p></div><figure class="fig"><img src="img/bab_cooking.jpg" alt="Testing Culture Classroom: a live cooking session" loading="lazy" data-full="img/bab_cooking.jpg" data-cap="Testing Culture Classroom: a live cooking session"><figcaption>Testing Culture Classroom: a live cooking session</figcaption></figure></div></div>
+<div class="chapter"><p class="label">06 · Key decision</p><div><h2>Tested where learners already were</h2><div class="txt"><p>A guided food walk through Rome went out on Babbel Travel’s social channels. Passport To, audio stories from locals with quizzes, started with Edinburgh. I also worked with the game studio on in-app mini-games and connected every cultural experience back to what learners had studied, so it doubled as review.</p></div><div class="figs"><figure class="fig"><img src="img/bab_rome.jpg" alt="Guided video tour: a food walk through Rome" loading="lazy" data-full="img/bab_rome.jpg" data-cap="Guided video tour: a food walk through Rome"><figcaption>Guided video tour: a food walk through Rome</figcaption></figure><figure class="fig"><img src="img/bab_passport.jpg" alt="Passport to Edinburgh: story map, audio player and quiz" loading="lazy" data-full="img/bab_passport.jpg" data-cap="Passport to Edinburgh: story map, audio player and quiz"><figcaption>Passport to Edinburgh: story map, audio player and quiz</figcaption></figure></div></div></div>
+<div class="chapter"><p class="label">Outcome</p><div><h2>An audio adventure the Webbys noticed</h2><div class="txt"><p>The interactive audio story, <em>Aventura on the Babbel Express</em>, was named an Honoree in the 2024 Webby Awards, Science and Education Podcast category. The casual learning experiences got clearer goals, progress carried over from lessons, and tracking from day one.</p></div><figure class="fig"><img src="img/bab_app.jpg" alt="The audio adventure inside the Babbel app" loading="lazy" data-full="img/bab_app.jpg" data-cap="The audio adventure inside the Babbel app"><figcaption>The audio adventure inside the Babbel app</figcaption></figure></div></div>
+<div class="chapter"><p class="label">What I'd do differently</p><div><h2>What you count is what you'll build</h2><div class="twocol"><div><h3>What Learner Minutes told us</h3><p>People were spending time in the cultural experiences.</p></div><div class="hl"><h3>What it never told us</h3><p>Whether they were progressing.</p></div></div></div></div>
+</div>
+
+</div></aside><aside class="sp" id="p-korber" role="dialog" aria-modal="true" aria-labelledby="p-korber-t" hidden><div class="sp-bar"><span>2019 – 2020 · Körber Digital · Product Manager / Senior Strategic Designer</span><button type="button" class="sp-x" aria-label="Close"><svg class="pix" viewBox="0 0 7 7" width="14" height="14" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="0" y="0" width="1" height="1"/><rect x="6" y="0" width="1" height="1"/><rect x="1" y="1" width="1" height="1"/><rect x="5" y="1" width="1" height="1"/><rect x="2" y="2" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/><rect x="5" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="6" y="6" width="1" height="1"/></svg></button></div><div class="sp-head"><h2 id="p-korber-t">A supply chain where one lost ID can cost a patient their therapy</h2><p class="sp-sub">SafeCell · healthcare, pharma, logistics</p></div><div class="sp-body">
+
+<div class="wrap cs-head">
+  <dl class="cs-meta"><div><dt>Role</dt><dd>Product Manager / Senior Strategic Designer</dd></div><div><dt>When</dt><dd>Jun – Aug 2019</dd></div><div><dt>Team</dt><dd>Product lead, strategic designers, system architect</dd></div><div><dt>Setting</dt><dd>Körber's digital innovation lab</dd></div></dl>
+  <p class="lede">Cell and gene therapies treat blood cancers and genetic diseases by taking a patient's own cells, altering them, and giving them back. SafeCell was a digital, end-to-end supply chain for that process, from admitting the patient to the cure.</p>
+  <div class="facts"><div class="fact"><div class="n">5</div><div class="t">days of fieldwork in Oklahoma City and Dallas</div></div><div class="fact"><div class="n">4</div><div class="t">parties to orchestrate</div></div><div class="fact"><div class="n">2</div><div class="t">core problems: orchestration and compliance</div></div><div class="fact"><div class="n">1</div><div class="t">patient, many different IDs</div></div></div>
+</div>
+<div class="wrap">
+<div class="chapter"><p class="label">01 · The problem</p><div><h2>Phone calls, emails and paper forms</h2><div class="txt"><p>Clinics, blood collection centres, couriers and manufacturers coordinated each therapy by email and phone, each with a different identifier for the same patient and its own paper forms. With few patients this worked. As demand grew, it would not scale, and in this chain a mix-up is not an inconvenience.</p></div><figure class="fig"><img src="img/sc_challenge.jpg" alt="The therapy journey and the parties involved" loading="lazy" data-full="img/sc_challenge.jpg" data-cap="The therapy journey and the parties involved"><figcaption>The therapy journey and the parties involved</figcaption></figure></div></div>
+<div class="chapter"><p class="label">02 · My part</p><div><h2>Assumptions first, then fieldwork</h2><div class="txt"><p>Before any research, we wrote down every assumption the team held and ranked them by how much the project depended on each. That list steered 5 days of shadowing at collection centres with the Blood Centers of America, watching nurses at work and interviewing oncologists and nurses.</p></div><div class="figs"><figure class="fig"><img src="img/sc_research1.jpg" alt="Assumptions, ranked by importance" loading="lazy" data-full="img/sc_research1.jpg" data-cap="Assumptions, ranked by importance"><figcaption>Assumptions, ranked by importance</figcaption></figure><figure class="fig"><img src="img/sc_research2.jpg" alt="Research plan for the collection centres" loading="lazy" data-full="img/sc_research2.jpg" data-cap="Research plan for the collection centres"><figcaption>Research plan for the collection centres</figcaption></figure></div></div></div>
+<div class="chapter"><p class="label">03 · Synthesis</p><div><h2>The pattern showed up on the wall</h2><div class="txt"><p>We transcribed the interviews, tagged quotes and clustered them. The simplest tool helped most: a wall of sticky notes, where it became clear that every party struggled with the same 2 things.</p></div><figure class="fig"><img src="img/sc_wall1.jpg" alt="Clustering interview findings" loading="lazy" data-full="img/sc_wall1.jpg" data-cap="Clustering interview findings"><figcaption>Clustering interview findings</figcaption></figure><figure class="fig"><img src="img/sc_wall2.jpg" alt="The synthesis wall" loading="lazy" data-full="img/sc_wall2.jpg" data-cap="The synthesis wall"><figcaption>The synthesis wall</figcaption></figure></div></div>
+<div class="chapter"><p class="label">04 · Outcome</p><div><h2>Orchestration and compliance, at scale</h2><div class="txt"><p>For every player in the chain, orchestration and compliance were the big problems. SafeCell was framed as the least disruptive way to solve both while keeping quality at scale, and taken forward as a prototype in Körber’s innovation funnel.</p></div><figure class="fig"><img src="img/sc_solution.jpg" alt="Solution approach" loading="lazy" data-full="img/sc_solution.jpg" data-cap="Solution approach"><figcaption>Solution approach</figcaption></figure><figure class="fig"><img src="img/sc_proto.jpg" alt="SafeCell prototype" loading="lazy" data-full="img/sc_proto.jpg" data-cap="SafeCell prototype"><figcaption>SafeCell prototype</figcaption></figure></div></div>
+</div>
+
+</div></aside><aside class="sp" id="p-omio" role="dialog" aria-modal="true" aria-labelledby="p-omio-t" hidden><div class="sp-bar"><span>2014 – 2018 · Omio (GoEuro) · UX/UI Designer</span><button type="button" class="sp-x" aria-label="Close"><svg class="pix" viewBox="0 0 7 7" width="14" height="14" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="0" y="0" width="1" height="1"/><rect x="6" y="0" width="1" height="1"/><rect x="1" y="1" width="1" height="1"/><rect x="5" y="1" width="1" height="1"/><rect x="2" y="2" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/><rect x="5" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="6" y="6" width="1" height="1"/></svg></button></div><div class="sp-head"><h2 id="p-omio-t">Designing booking for one of Europe’s biggest multi-modal travel platforms</h2><p class="sp-sub">Start-up to scale-up · B2C e-commerce</p></div><div class="sp-body"><div class="wrap"><dl class="cs-meta"><div><dt>Role</dt><dd>UX/UI Designer</dd></div><div><dt>When</dt><dd>2014 – 2018</dd></div><div><dt>Team</dt><dd>4 cross-functional teams, 2 designers, 1 user researcher</dd></div><div><dt>Delivered</dt><dd>UI design, developer handover, UI QA</dd></div></dl><div class="facts"><div class="fact"><div class="n">10</div><div class="t">months for the full revamp</div></div><div class="fact"><div class="n">96</div><div class="t">users interviewed</div></div><div class="fact"><div class="n">260</div><div class="t">mobile screens designed</div></div><div class="fact"><div class="n">120</div><div class="t">desktop screens designed</div></div></div><div class="chapter"><p class="label">01 · The problem</p><div><h2>Years of fast growth, years of debt</h2><div class="txt"><p>A product study showed years of usability problems and technical debt across mobile and desktop web. The hard part was the size of it: finding, documenting and redesigning every flow variation and edge case, while 4 cross-functional teams delivered in parallel.</p></div></div></div><div class="chapter"><p class="label">02 · My part</p><div><h2>1-week prototype cycles</h2><div class="txt"><p>We started with interviews with users and people in our target group, then ran 1-week cycles of quick prototypes and user feedback. Once the big themes were clear, developers started on the large changes while we refined the details. Nov 2017 to Aug 2018.</p></div><figure class="fig"><img src="img/omio_process.jpg" alt="From product study to development, with testing at every step" loading="lazy" data-full="img/omio_process.jpg" data-cap="From product study to development, with testing at every step"><figcaption>From product study to development, with testing at every step</figcaption></figure><figure class="fig"><img src="img/omio_wall.jpg" alt="Mapping every flow variation for the revamp" loading="lazy" data-full="img/omio_wall.jpg" data-cap="Mapping every flow variation for the revamp"><figcaption>Mapping every flow variation for the revamp</figcaption></figure><figure class="fig"><img src="img/omio_bigwall.jpg" alt="The full journey on the wall, screen by screen" loading="lazy" data-full="img/omio_bigwall.jpg" data-cap="The full journey on the wall, screen by screen"><figcaption>The full journey on the wall, screen by screen</figcaption></figure></div></div><div class="chapter"><p class="label">03 · What we learnt</p><div><h2>Research on the phone, booking in peace</h2><div class="txt"><p>People use short moments on their phone for first research, and often share the trip with the person they travel with. When it comes to booking, they want a calm moment, and the device they pick depends on how complex the journey is. So the flow had to adapt to the device, not the other way round.</p></div></div></div><div class="chapter"><p class="label">04 · Multi-modal</p><div><h2>Booking a multi-modal journey in one go</h2><div class="txt"><p>A missed flight is the costly part of a trip, so people buy flights first and fit trains and buses around them later. The goal was a new flow to book a complex journey in one go, with several legs and modes of transport. Aug to Oct 2018.</p></div><figure class="fig"><img src="img/omio_mm_research.jpg" alt="Research: mapping real journeys, from home to the airport and beyond" loading="lazy" data-full="img/omio_mm_research.jpg" data-cap="Research: mapping real journeys, from home to the airport and beyond"><figcaption>Research: mapping real journeys, from home to the airport and beyond</figcaption></figure><figure class="fig"><img src="img/omio_mm_process.jpg" alt="Discovery at home, a design thinking workshop, a printed concept study, then the finished design" loading="lazy" data-full="img/omio_mm_process.jpg" data-cap="Discovery at home, a design thinking workshop, a printed concept study, then the finished design"><figcaption>Discovery at home, a design thinking workshop, a printed concept study, then the finished design</figcaption></figure></div></div><div class="chapter"><p class="label">Outcome</p><div><h2>Flexibility around the flight</h2><div class="txt"><p>Flexibility before and after the flight mattered most to people, because that’s the least predictable part of the trip. Giving them options to adjust took away a lot of the anxiety. Research up front made the design more confident and meant far fewer iterations after launch.</p></div><figure class="fig"><img src="img/omio_multi.jpg" alt="The multi-modal booking flow" loading="lazy" data-full="img/omio_multi.jpg" data-cap="The multi-modal booking flow"><figcaption>The multi-modal booking flow</figcaption></figure></div></div></div></div></aside>
+<div class="sp-scrim" id="spscrim" hidden></div>
+<script>
+(function(){
+  var scrim=document.getElementById('spscrim'),cur=null,last=null;
+  function open(id){var p=document.getElementById(id);if(!p)return;if(cur)close(true);last=document.activeElement;cur=p;scrim.hidden=false;p.hidden=false;p.scrollTop=0;document.documentElement.classList.add('sp-lock');requestAnimationFrame(function(){p.classList.add('in');scrim.classList.add('in');});p.querySelector('.sp-x').focus();try{history.replaceState(null,'','#'+id.slice(2));}catch(e){}}
+  function close(quick){if(!cur)return;var p=cur;cur=null;p.classList.remove('in');scrim.classList.remove('in');document.documentElement.classList.remove('sp-lock');setTimeout(function(){p.hidden=true;if(!cur)scrim.hidden=true;},quick?0:220);try{history.replaceState(null,'',location.pathname);}catch(e){}if(!quick&&last)last.focus();}
+  document.querySelectorAll('[data-open]').forEach(function(b){b.addEventListener('click',function(){open(b.getAttribute('data-open'));});});
+  document.querySelectorAll('.sp-x').forEach(function(b){b.addEventListener('click',function(){close();});});
+  scrim.addEventListener('click',function(){close();});
+  document.addEventListener('keydown',function(e){var lb=document.getElementById('lb');if(e.key==='Escape'&&cur&&(!lb||lb.hidden))close();});
+  if(location.hash&&document.getElementById('p-'+location.hash.slice(1)))open('p-'+location.hash.slice(1));
+})();
+</script>
+
+</main>
+<footer class="foot" id="contact"><div class="wrap">
+<p class="big">Building something<br>that has to be right? Let’s talk</p>
+<div class="links"><button type="button" id="emailbtn">email</button><a href="https://www.linkedin.com/in/nastassiaeo/" target="_blank" rel="noopener">linkedin</a><span class="mail" id="mail" hidden>nastassia.oswald@gmail.com</span></div>
+<p class="small">© 2026 Nastassia Oswald · Lanzada, Italian Alps · working remotely across Europe</p>
+</div></footer>
+<div class="lb" id="lb" hidden><figure><img id="lbimg" alt=""><figcaption><span id="lbcap"></span><span class="ctl"><button type="button" id="lbprev" aria-label="Previous"><svg class="pix" viewBox="0 0 7 7" width="14" height="14" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="3" y="0" width="1" height="1"/><rect x="2" y="1" width="1" height="1"/><rect x="1" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/><rect x="5" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="2" y="5" width="1" height="1"/><rect x="3" y="6" width="1" height="1"/></svg></button><button type="button" id="lbnext" aria-label="Next"><svg class="pix" viewBox="0 0 7 7" width="14" height="14" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="3" y="0" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/><rect x="5" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="5" y="4" width="1" height="1"/><rect x="4" y="5" width="1" height="1"/><rect x="3" y="6" width="1" height="1"/></svg></button><button type="button" id="lbclose" aria-label="Close"><svg class="pix" viewBox="0 0 7 7" width="14" height="14" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="0" y="0" width="1" height="1"/><rect x="6" y="0" width="1" height="1"/><rect x="1" y="1" width="1" height="1"/><rect x="5" y="1" width="1" height="1"/><rect x="2" y="2" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/><rect x="5" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="6" y="6" width="1" height="1"/></svg></button></span></figcaption></figure></div>
+<script>
+(function(){
+  try{if('scrollRestoration' in history)history.scrollRestoration='manual';}catch(e){}
+  function top(){if(!location.hash)window.scrollTo({top:0,left:0,behavior:'instant'});}
+  top();addEventListener('load',top);addEventListener('pageshow',top);
+})();
+(function(){
+  var rail=document.getElementById('rail'),fold=document.getElementById('fold');
+  function setFold(c){rail.classList.toggle('collapsed',c);fold.setAttribute('aria-expanded',String(!c));fold.setAttribute('aria-label',c?'Open menu':'Collapse menu');fold.querySelector('.up').style.display=c?'none':'block';fold.querySelector('.down').style.display=c?'block':'none';}
+  if(rail){var c0=false;try{c0=localStorage.getItem('no-rail')==='1';}catch(e){}setFold(c0);
+    fold.addEventListener('click',function(){var c=!rail.classList.contains('collapsed');setFold(c);try{localStorage.setItem('no-rail',c?'1':'0');}catch(e){}});}
+  var lb=document.getElementById('lb');
+  if(lb){var li=document.getElementById('lbimg'),lc=document.getElementById('lbcap'),pv=document.getElementById('lbprev'),nx=document.getElementById('lbnext'),last=null,group=[],idx=0;
+    function show(){var el=group[idx];li.src=el.getAttribute('data-full');li.alt=el.getAttribute('data-cap')||'';lc.textContent=el.getAttribute('data-cap')||'';var multi=group.length>1;pv.hidden=!multi;nx.hidden=!multi;}
+    function openEl(el){var g=el.getAttribute('data-group');group=g?[].slice.call(document.querySelectorAll('[data-group="'+g+'"][data-full]')):[el];idx=Math.max(0,group.indexOf(el));last=document.activeElement;show();lb.hidden=false;document.getElementById('lbclose').focus();}
+    function close(){lb.hidden=true;li.removeAttribute('src');if(last)last.focus();}
+    function step(d){idx=(idx+d+group.length)%group.length;show();}
+    document.querySelectorAll('[data-full]').forEach(function(el){if(el.tagName!=='BUTTON'&&el.tagName!=='IMG')return;el.addEventListener('click',function(){openEl(el);});});
+    document.querySelectorAll('[data-open-group]').forEach(function(el){el.addEventListener('click',function(){var g=[].slice.call(document.querySelectorAll('[data-group="'+el.getAttribute('data-open-group')+'"][data-full]'));var t=g[g.length-1];openEl(t);});});
+    pv.addEventListener('click',function(){step(-1);});nx.addEventListener('click',function(){step(1);});
+    document.getElementById('lbclose').addEventListener('click',close);
+    lb.addEventListener('click',function(e){if(e.target===lb)close();});
+    document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowRight'&&group.length>1)step(1);if(e.key==='ArrowLeft'&&group.length>1)step(-1);});}
+  document.querySelectorAll('details[name]').forEach(function(d){d.addEventListener('toggle',function(){if(!d.open)return;document.querySelectorAll('details[name="'+d.getAttribute('name')+'"]').forEach(function(o){if(o!==d&&o.open)o.open=false;});});});
+  var em=document.getElementById('emailbtn');
+  if(em)em.addEventListener('click',function(){var t='nastassia.oswald@gmail.com',m=document.getElementById('mail');m.hidden=false;
+    try{navigator.clipboard.writeText(t).then(function(){em.textContent='copied';},function(){});}catch(e){}
+    var r=document.createRange();r.selectNodeContents(m);var s=getSelection();s.removeAllRanges();s.addRange(r);setTimeout(function(){em.textContent='email';},2400);});
+})();
+</script></body></html>
