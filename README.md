@@ -1,4 +1,4 @@
-# Nastassia Oswald Portfolio
+# Nastassia Oswald Portfolio 1.1.0
 
 Static site. No build step needed.
 
@@ -8,7 +8,7 @@ Drag the folders themselves (not their contents) so the folder names are kept.
 
 1. The 6 .html files, README.md and the `fonts` folder
 2. The `img/cases` folder (36 files)
-3. The `img/apps` folder (31 files)
+3. The `img/apps` folder (30 files)
 4. The `img/film` folder (32 files)
 
 The images must end up at `img/cases/...`, `img/apps/...` and `img/film/...`.
