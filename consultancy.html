@@ -8,6 +8,8 @@
 :root{
   --char:#232323; --char-2:#393939; --white:#FFFFFF; --offwhite:#F9F9F9;
   --lilac:#D388FF; --lilac-2:#FD88FF; --lilac-deep:#7A34A6;
+  --pink-grad:linear-gradient(90deg,#D388FF 0%,#FD88FF 100%);
+  --cool-grad:linear-gradient(90deg,#87F3B4 0%,#23AEFF 100%);
   --mint:#D1F902; --mint-deep:#4C5A09;
   --ink:#232323; --ink-2:#474747; --muted:#6E6E6E;
   --on-char:#FFFFFF; --on-char-dim:#D1D1D1; --hair:#E4E4E4; --track:#EDEDED;
@@ -53,9 +55,10 @@ h3{font-family:var(--f-body);font-weight:500;font-size:1.0625rem;line-height:1.3
 .hero-meta .who{font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-char-dim)}
 .hero-meta .avail{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mint);display:inline-flex;align-items:center;gap:7px}
 .hero-meta .avail::before{content:"";width:6px;height:6px;background:var(--mint);border-radius:50%}
-.hero h1{margin:28px 0 0;max-width:18ch;color:var(--lilac);text-shadow:.065em .065em 0 var(--mint)}
+.hero h1{position:relative;z-index:0;margin:28px 0 0;max-width:18ch;background:var(--pink-grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.hero h1::before{content:attr(data-text);position:absolute;left:.06em;top:.06em;width:100%;z-index:-1;background:var(--cool-grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 .hero-said{font-family:var(--f-mono);font-size:14px;line-height:1.62;color:var(--on-char);max-width:44ch;margin-top:26px}
-.hero .cta{display:inline-flex;align-items:center;gap:18px;margin-top:24px;font-family:var(--f-mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:500;background:linear-gradient(90deg,var(--lilac) 0%,var(--lilac-2) 100%);color:var(--char);text-decoration:none;padding:15px 18px;min-height:52px;justify-content:space-between;width:100%}
+.hero .cta{display:inline-flex;align-items:center;gap:18px;margin-top:24px;font-family:var(--f-mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:500;background:var(--pink-grad);color:var(--char);text-decoration:none;padding:15px 18px;min-height:52px;justify-content:space-between;width:100%}
 .hero .cta:hover{background:var(--mint);color:var(--char)}
 
 /* modules */
@@ -64,7 +67,7 @@ h3{font-family:var(--f-body);font-weight:500;font-size:1.0625rem;line-height:1.3
 .items{display:flex;flex-direction:column}
 .item{padding:22px 0;border-top:1px solid var(--hair)}
 .item:first-child{border-top:1.5px solid var(--ink)}
-.n{font-family:var(--f-pix);font-weight:400;font-size:30px;line-height:1;display:block;margin-bottom:12px;color:var(--lilac-2)}
+.n{font-family:var(--f-pix);font-weight:400;font-size:30px;line-height:1;display:block;margin-bottom:12px;width:max-content;background:var(--pink-grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 .item h3{max-width:26ch}
 .item .body{margin-top:8px;max-width:40ch;font-size:.9375rem}
 details{margin-top:12px}
@@ -74,7 +77,7 @@ summary .arw{transition:transform .18s ease;display:inline-block}
 details[open] summary .arw{transform:rotate(90deg)}
 summary .txt::after{content:"Read more"}
 details[open] summary .txt::after{content:"Less"}
-.reveal{padding:2px 0 4px 14px;max-width:40ch;font-size:.9375rem;color:var(--muted);line-height:1.55;border-left:3px solid var(--lilac)}
+.reveal{padding:2px 0 4px 14px;max-width:40ch;font-size:.9375rem;color:var(--muted);line-height:1.55;border-left:3px solid;border-image:linear-gradient(180deg,#D388FF 0%,#FD88FF 100%) 1}
 .offer{padding:22px 0;border-top:1px solid var(--hair)}
 .offer:first-of-type{border-top:1.5px solid var(--ink)}
 .offer .nm{font-family:var(--f-pix);font-weight:400;font-size:16px;line-height:1.25;display:block;text-transform:uppercase}
@@ -91,7 +94,7 @@ details[open] summary .txt::after{content:"Less"}
 .sv{font-family:var(--f-pix);font-weight:400;font-size:16px;line-height:1;white-space:nowrap}
 .sv .drop{font-family:var(--f-mono);font-size:11px;font-weight:400;color:var(--muted);margin-left:7px}
 .track{height:13px;background:var(--track)}
-.fill{height:13px;background:var(--mint)}
+.fill{height:13px;background:var(--cool-grad)}
 .fill.last{background:var(--char)}
 .flagline{display:flex;align-items:center;gap:8px;margin-top:9px}
 .flagline .tick{width:3px;height:15px;background:var(--lilac-deep);flex:0 0 3px}
@@ -149,7 +152,7 @@ footer.wrap{padding-block:34px 48px;display:flex;flex-direction:column;gap:6px}
         <span class="avail">Available Q4 2026</span>
       </div>
       <div class="hero-grid">
-        <h1>I find out why your pilots stall</h1>
+        <h1 data-text="I find out why your pilots stall">I find out why your pilots stall</h1>
         <div>
           <p class="hero-said">I work where the sales case and the product scope have to agree, because that is where pilots are won or lost.</p>
           <a class="cta" href="mailto:nastassia.oswald@gmail.com?subject=Pilot%20teardown"><span>Book a chat</span><span>→</span></a>
